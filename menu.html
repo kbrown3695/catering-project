@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Egerton University Catering Department</title>
+    <link rel="stylesheet" href="style.css">
+
+     <!--  CSS Supporting FIles  -->
+  <link href="../static/files/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../static/files/css/lightslider.css">
+  <link rel="stylesheet" href="../static/files/css/style.css">
+  <!--  JS  Supporting FIles    -->
+  <script src="../static/files/js/bootstrap.bundle.min.js"></script>
+  <script src="../static/files/js/jquery.js"></script>
+  <script src="../static/files/js/lightslider.js"></script>
+  <script src="../static/files/js/script.js"></script>
+
+</head>
+<body>
+  <header class="header" style="display: flex; flex-direction: column;">
+    <div class="logo-container" style="display: flex; align-items: center;">
+        <div style="background-color: #10aa34; padding: 10px;">
+            <img src="egertonuniversity-logo_thumb.png" alt="symbol" class="logo" style="display: block;">
+        </div>
+        <div style="margin-left: 10px;">
+            <h1 class="main-title" style="margin: 0;">Egerton University</h1>
+            <h1 class="sub-title" style="margin: 0;">Catering Department</h1>
+        </div>
+    </div>
+    <nav class="nav-bar" style="margin-top: auto; text-align: right;">
+        <ul style="list-style: none; display: flex; justify-content: flex-end; margin: 0; padding: 0;">
+            <li><a href="index.html">Home</a></li>
+            <li style="margin-left: 20px;"><a href="services.html">Services</a></li>
+            <li style="margin-left: 20px;"><a href="menu.html">Menu</a></li>
+            <li style="margin-left: 20px;"><a href="ourteam.html">Staff</a></li>
+            <li style="margin-left: 20px;"><a href="contactus.html">Contact Us</a></li>
+            <li style="margin-left: 20px;"><a href="account.html">Account</a></li>
+        </ul>
+    </nav>
+</header>
+</script>
+<title class="egerton">Egerton University Catering Department</title>
+<link rel="stylesheet" href="style.css">
+
+
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+            background-color: #fdf9f9;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #737171;
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+        
+        .payment-section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: auto;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        .modal {
+            display: none;
+            position: absolute;
+            z-index: 1;
+            left: 50%;
+            top: 273px;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 300px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .modal-content {
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+    </style>
+
+
+
+    <h2>Egerton University Cafeteria Menu</h2>
+    <div class="payment-section"> 
+        <button id="make-payment-button" onclick="togglePaymentForm()" style="padding: 10px 20px; background-color: rgb(110, 109, 109); color: rgb(250, 246, 246); border: none; border-radius: 5px; cursor: pointer;">
+            Select Food
+        </button>
+        
+        <div id="payment-form-container" style="display: none; margin-top: 20px;">
+            <h5>Payment Information</h5>
+            <form id="payment-form" onsubmit="showModal(); return false;">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="admission-number">Admission Number:</label>
+                <input type="text" id="admission-number" name="admission-number" required>
+    
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+    
+                <label for="food-order">Food Order:</label>
+                <select id="food-order" name="food-order" required onchange="updateAmount()">
+                    <option value="">Select</option>
+                    <option value="Ugali with Sukuma Wiki">Ugali with Sukuma Wiki</option>
+                    <option value="Nyama Choma (Beef)">Nyama Choma (Beef)</option>
+                    <option value="Chapati with Beans Stew">Chapati with Beans Stew</option>
+                    <option value="Githeri">Githeri</option>
+                    <option value="Matoke with Beef Stew">Matoke with Beef Stew</option>
+                    <option value="Fish (Tilapia) with Ugali">Fish (Tilapia) with Ugali</option>
+                    <option value="Mukimo with Chicken Stew">Mukimo with Chicken Stew</option>
+                    <option value="Pilau">Pilau</option>
+                    <option value="Samosa">Samosa</option>
+                    <option value="Mandazi">Mandazi</option>
+                    <option value="White Tea">White Tea</option>
+                    <option value="Black Tea">Black Tea</option>
+                    <option value="Bhajia">Bhajia</option>
+                    <option value="Chips">Chips</option>
+                    <option value="Rice Chicken">Rice Chicken</option>
+                </select>
+    
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount" name="amount" required readonly>
+    
+                <button type="submit">Make Payment</button>
+            </form>
+        </div>
+    </div>
+    
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p id="payment-message"></p>
+        </div>
+    </div>
+    
+    <script>
+        const foodPrices = {
+            "Ugali with Sukuma Wiki": 50,
+            "Nyama Choma (Beef)": 150,
+            "Chapati with Beans Stew": 40,
+            "Githeri": 50,
+            "Matoke with Beef Stew": 140,
+            "Fish (Tilapia) with Ugali": 260,
+            "Mukimo with Chicken Stew": 220,
+            "Pilau": 90,
+            "Samosa": 10,
+            "Mandazi": 10,
+            "White Tea": 20,
+            "Black Tea": 15,
+            "Bhajia": 60,
+            "Chips": 80,
+            "Rice Chicken": 150
+        };
+    
+        function updateAmount() {
+            const foodOrder = document.getElementById('food-order').value;
+            const amountInput = document.getElementById('amount');
+            amountInput.value = foodPrices[foodOrder] || '';
+        }
+    
+        function showModal() {
+            const foodOrder = document.getElementById('food-order').value;
+            const amount = document.getElementById('amount').value;
+            const paymentMessage = `You have successfully ordered ${foodOrder}. An Mpesa payment option will pop up on your mobile phone. The total amount to be paid is KSh ${amount}.`;
+            document.getElementById('payment-message').innerText = paymentMessage;
+            document.getElementById('modal').style.display = 'block';
+        }
+    
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+            document.getElementById('payment-form').reset(); // Clear the form fields
+            document.getElementById('amount').value = ''; // Reset the amount field
+        }
+    
+        function togglePaymentForm() {
+            const paymentFormContainer = document.getElementById('payment-form-container');
+            if (paymentFormContainer.style.display === 'none') {
+                paymentFormContainer.style.display = 'block';
+            } else {
+                paymentFormContainer.style.display = 'none';
+            }
+        }
+    </script>
+    
+
+    <table>
+        <tr>
+            <th>Food</th>
+            <th>Price (KSh)</th>
+            <th>Picture</th>
+        </tr>
+        <tr>
+            <td>Ugali with Sukuma Wiki</td>
+            <td>KSh 50</td>
+            <td><img src="Ugali_&_Sukuma_Wiki.jpg" alt="Ugali with Sukuma Wiki"></td>
+        </tr>
+        <tr>
+            <td>Nyama Choma (Beef)</td>
+            <td>KSh 150</td>
+            <td><img src="Nyama-Choma-Kenyan-Grilled-Goat-Meat-3.webp" alt="Nyama Choma"></td>
+        </tr>
+        <tr>
+            <td>Chapati with Beans Stew</td>
+            <td>KSh 40</td>
+            <td><img src="chapo beans.jpg" alt="Chapati with Beans Stew"></td>
+        </tr>
+        <tr>
+            <td>Githeri</td>
+            <td>KSh 50</td>
+            <td><img src="githeri_0-scaled.jpg" alt="Githeri"></td>
+        </tr>
+        <tr>
+            <td>Matoke with Beef Stew</td>
+            <td>KSh 140</td>
+            <td><img src="matoke-and-beef-stew-recipe-main-photo.jpg" alt="Matoke with Beef Stew"></td>
+        </tr>
+        <tr>
+            <td>Fish (Tilapia) with Ugali</td>
+            <td>KSh 260</td>
+            <td><img src="ugali fish.jpg" alt="Fish with Ugali"></td>
+        </tr>
+        <tr>
+            <td>Mukimo with Chicken Stew</td>
+            <td>KSh 220</td>
+            <td><img src="mukimu chicken.jpg" alt="Mukimo with Chicken Stew"></td>
+        </tr>
+        <tr>
+            <td>Pilau</td>
+            <td>KSh 90</td>
+            <td><img src="The-Best-Pilau-Recipe.jpg" alt="Pilau"></td>
+        </tr>
+        <tr>
+            <td>Samosa</td>
+            <td>KSh 10</td>
+            <td><img src="My-Moms-Beef-Samosa-10-735x1103.jpg" alt="Samosa"></td>
+        </tr>
+        <tr>
+            <td>Mandazi</td>
+            <td>KSh 10</td>
+            <td><img src="mandazi.jpg" alt="Mandazi"></td>
+        </tr>
+        <tr>
+            <td>White Tea</td>
+            <td>KSh 20</td>
+            <td><img src="Royal-Milk-Tea-7613.jpg" alt="White Tea"></td>
+        </tr>
+        <tr>
+            <td>Black Tea</td>
+            <td>KSh 15</td>
+            <td><img src="black tea.jpg" alt="Black Tea"></td>
+        </tr>
+        <tr>
+            <td>Bhajia</td>
+            <td>KSh 60</td>
+            <td><img src="potato-bhajia-5.jpg" alt="Bhajia"></td>
+        </tr>
+        <tr>
+            <td>Chips</td>
+            <td>KSh 80</td>
+            <td><img src="French-fries-takeaway-nutritional-information-calories.jpg" alt="Chips"></td>
+        </tr>
+        <tr>
+            <td>Rice Chicken</td>
+            <td>KSh 150</td>
+            <td><img src="rice chicken.jpg" alt="Coconut Rice with Chicken Curry"></td>
+        </tr>
+    </table>
+
+  <!-- Copyright Footer -->
+  <div style="background-color: #333; color: white; text-align: center; padding: 20px 0; width: 100%;">
+    <div class="copyright" style="font-size: 14px;">
+        &copy; 2024 Egerton University.
+        <p>All rights reserved.</p>
+    </div>
+</div>
+
+</body>
+</html>
+</body>
+</html>

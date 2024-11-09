@@ -1,0 +1,280 @@
+/* Basic Styling */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.egerton{
+    font-family: 'Times New Roman', Times, serif;
+}
+ h2 {
+    color: #20f84e;
+    margin: 0;
+    
+}
+h3  {
+    color: #1906e8;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+}
+h4   {
+    color: #10aa34;
+    margin: 0;
+}
+h5   {
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.5em;
+    margin: 0;
+}
+
+h2   {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0;
+}
+h1  {
+    color: #ddd;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+} 
+.container{
+margin: 0;
+}
+
+/* Header and Navigation */
+.header {
+    background-color: #eab60b;
+    color: rgb(5, 4, 4); /* Use valid RGB values */
+    text-align: center;
+    padding: 20px 0;
+    margin: 0;
+    margin-bottom: 0;
+}
+
+.logo {
+    width: 200px; /* Set logo width */
+    height: 180px; /* Maintain aspect ratio */
+    margin: 0;
+}
+
+.main-title {
+    font-size: 4em; /* Main title size */
+    margin: 0;
+}
+
+.sub-title {
+    font-size: 3.5em; /* Subtitle size */
+    margin: 0;
+}
+
+.nav-bar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+.nav-bar ul li {
+    display: inline;
+    margin: 0 5px;
+}
+
+.nav-bar ul li a {
+    color: rgb(6, 4, 4);
+    text-decoration: none;
+    
+}
+.nav-bar ul li a:hover {
+    color: #ddd;
+}
+
+
+
+#services .service-list {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+#services .service-menu {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+.service-item {
+    background-color: #e7dfdf;
+    padding: 10px;
+    border-radius: 5px;
+    width: 30%;
+    text-align: center;
+}
+.service-menu {
+    background-color: #dddcd9;
+    padding: 10px;
+    border-radius: 5px;
+    width: 30%;
+    text-align: left;
+}
+
+
+
+
+/* Services Page */
+.service-details {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.service-item img {
+    width: 100%;
+    height: 65%;
+    height: auto;
+    border-radius: 10px;
+
+}
+.service-list  {
+    background-color: #b3adad;
+    width: 100%;
+    height: 70%;
+    height: auto;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+
+.service-intro {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    border-radius: 10px;
+    padding: 10px;
+    height: 60%;
+    width: 60%;
+
+}
+/* Flexbox for Team Section */
+.team-columns {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.team-member {
+    background-color: #b3adad;
+    padding: 20px;
+    text-align: center;
+    width: 30%;
+    border-radius: 10px;
+}
+
+.team-member img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+/* Table Layout */
+.menu-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.menu-table th, .menu-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.menu-table th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Multiple-Column Layout in Footer */
+footer  {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+}
+
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.main {
+    display: flex;
+    justify-content: space-around;
+    background: url(image8.jpeg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    padding: 44px;
+    padding-top: 100px;
+    margin-top: 80px;
+  }
+  
+  .mainText {
+    margin-top: 73px;
+  }
+  
+  .mainText h1 {
+    font-size: 50px;
+  }
+  
+  .mainText h3 {
+    font-size: 30px;
+    margin-bottom: 12px;
+  }
+  .mainText p {
+    margin-top: 20px;
+  }
+  .mainText button {
+    font-size: 20px;
+    width: 140px;
+    height: 36px;
+    border: 2px solid rgb(8, 212, 8);
+    background-color: transparent;
+    margin-top: 22px;
+    color: #fff;
+    transition: all ease 0.5s;
+  }
+  
+  .mainText button:hover {
+    background-color: rgb(8, 212, 8);
+    cursor: pointer;
+  }
+  
+  .main h1 span {
+    background-color: rgb(7, 231, 7);
+  }
+  .logo span,
+  .main span,
+  .head span {
+    color: orangered;}
+
+    .transparent{
+        background-color: transparent;
+    }
