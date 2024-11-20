@@ -20,79 +20,80 @@
 <body>
 </head>
 <body>
-  <header class="header" style="display: flex; flex-direction: column;">
-    <div class="logo-container" style="display: flex; align-items: center;">
-        <div style="background-color: #10aa34; padding: 10px;">
-            <img src="egertonuniversity-logo_thumb.png" alt="symbol" class="logo" style="display: block;">
-        </div>
-        <div style="margin-left: 10px;">
-            <h1 class="main-title" style="margin: 0;">Egerton University</h1>
-            <h1 class="sub-title" style="margin: 0;">Catering Department</h1>
-        </div>
-    </div>
-    <nav class="nav-bar" style="margin-top: auto; text-align: right;">
-        <ul style="list-style: none; display: flex; justify-content: flex-end; margin: 0; padding: 0;">
-            <li><a href="index.html">Home</a></li>
-            <li style="margin-left: 20px;"><a href="services.html">Services</a></li>
-            <li style="margin-left: 20px;"><a href="menu.html">Menu</a></li>
-            <li style="margin-left: 20px;"><a href="ourteam.html">Staff</a></li>
-            <li style="margin-left: 20px;"><a href="contactus.html">Contact Us</a></li>
-            <li style="margin-left: 20px;"><a href="account.html">Account</a></li>
-        </ul>
-    </nav>
-</header>
-
-   
-    </header>
-  </script>
-  <title class="egerton">Egerton University Catering Department</title>
-  <link rel="stylesheet" href="style.css">
-  
-  <form class="row g-3">
-    <div class="col-md-6">
-      <label for="inputEmail4" class="form-label">Email</label>
-      <input type="email" class="form-control" id="inputEmail4">
-    </div>
-    <div class="col-md-6">
-      <label for="inputPassword4" class="form-label">Password</label>
-      <input type="password" class="form-control" id="inputPassword4">
-    </div>
-    <div class="col-12">
-      <label for="inputAddress" class="form-label">Address</label>
-      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-    </div>
-    <div class="col-12">
-      <label for="inputAddress2" class="form-label">Address 2</label>
-      <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-    </div>
-    <div class="col-md-6">
-      <label for="inputCity" class="form-label">City</label>
-      <input type="text" class="form-control" id="inputCity">
-    </div>
-    <div class="col-md-4">
-      <label for="inputState" class="form-label">State</label>
-      <select id="inputState" class="form-select">
-        <option selected>Choose...</option>
-        <option>...</option>
-      </select>
-    </div>
-    <div class="col-md-2">
-      <label for="inputZip" class="form-label">Zip</label>
-      <input type="text" class="form-control" id="inputZip">
-    </div>
-    <div class="col-12">
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="gridCheck">
-        <label class="form-check-label" for="gridCheck">
-          Check me out
-        </label>
+  <header class="header">
+    <div class="logo-container">
+      <div style="background-color: #10aa34; padding: 10px;">
+        <img src="image/egertonuniversity-logo_thumb.png" alt="symbol" class="logo">
+      </div>
+      <div style="margin-left: 10px;">
+        <h1 class="main-title">Egerton University</h1>
+        <h1 class="sub-title">Catering Department</h1>
       </div>
     </div>
-    <div class="col-12">
-      <button type="submit" class="btn btn-primary">Sign in</button>
+    
+    <div class="menu-toggle">
+      <span>&#9776;</span>
     </div>
-  </form>
+    
+    <nav class="nav-bar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="ourteam.html">Staff</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+        <li><a href="account.html">Account</a></li>
+      </ul>
+    </nav>
+  </header>
+ 
   
+  
+  <form class="row g-4" style="max-width: 1200px; margin: 0 auto; padding-top: 20px;padding-bottom: 20px;">
+    <div class="col-md-6">
+        <label for="inputEmail4" class="form-label">Email</label>
+        <input type="email" class="form-control" id="inputEmail4" placeholder="Enter your email" required>
+    </div>
+    <div class="col-md-6">
+        <label for="inputPassword4" class="form-label">Password</label>
+        <input type="password" class="form-control" id="inputPassword4" placeholder="Enter your password" required>
+    </div>
+    <div class="col-12">
+        <label for="inputAddress" class="form-label">Address</label>
+        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" required>
+    </div>
+    <div class="col-12">
+        <label for="inputAddress2" class="form-label">Address 2</label>
+        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+    </div>
+    <div class="col-md-6">
+        <label for="inputCity" class="form-label">City</label>
+        <input type="text" class="form-control" id="inputCity" required>
+    </div>
+    <div class="col-md-4">
+        <label for="inputState" class="form-label">State</label>
+        <select id="inputState" class="form-select" required>
+            <option selected>Choose...</option>
+            <option>...</option>
+        </select>
+    </div>
+    <div class="col-md-2">
+        <label for="inputZip" class="form-label">Zip</label>
+        <input type="text" class="form-control" id="inputZip" required>
+    </div>
+    <div class="col-12">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck">
+            <label class="form-check-label" for="gridCheck">
+                I agree to the terms and conditions
+            </label>
+        </div>
+    </div>
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary w-100">Sign in</button>
+    </div>
+</form>
+
      <!-- Copyright Footer -->
      <div style="background-color: #333; color: white; text-align: center; padding: 20px 0; width: 100%;">
         <div class="copyright" style="font-size: 14px;">
@@ -100,5 +101,6 @@
             <p>All rights reserved.</p>
         </div>
     </div>  
+    <script src="index.js"></script>
     </body>
     </html>
